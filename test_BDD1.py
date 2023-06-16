@@ -16,4 +16,6 @@ time.sleep(10)
 lupa.click()
 time.sleep(10)
 
-print(lupa.is_enabled())
+#print(lupa.is_displayed())
+
+assert lupa.is_displayed()

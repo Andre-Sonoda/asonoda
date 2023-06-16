@@ -8,4 +8,3 @@ browser.get("https://advantageonlineshopping.com/")
 
 lupa = browser.find_element(By.ID, "menuSearch")
 print(lupa.is_displayed())
-#assert lupa.is_displayed()

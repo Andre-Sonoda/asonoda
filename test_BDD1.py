@@ -1,3 +1,5 @@
+import time
+
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
@@ -6,5 +8,12 @@ browser = webdriver.Chrome()
 browser.maximize_window()
 browser.get("https://advantageonlineshopping.com/")
 
+#find elemente()
 lupa = browser.find_element(By.ID, "menuSearch")
-print(lupa.is_displayed())
+time.sleep(10)
+
+#clickc()
+lupa.click()
+time.sleep(10)
+
+print(lupa.is_enabled())

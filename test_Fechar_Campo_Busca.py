@@ -14,9 +14,12 @@ time.sleep(10)
 lupa.click()
 time.sleep(10)
 assert lupa.is_displayed()
-#print(lupa.is_displayed())
 
 #find elemente()
 lupa = browser.find_element(By.ID, "menuSearch")
 time.sleep(10)
 
+#clickc()
+lupa.click()
+time.sleep(10)
+assert lupa.is_displayed()

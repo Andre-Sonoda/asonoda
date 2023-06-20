@@ -1,6 +1,5 @@
 import time
 
-import self as self
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
@@ -9,7 +8,7 @@ browser.maximize_window()
 browser.get("https://advantageonlineshopping.com/")
 time.sleep(10)
 
-# find elemente()
+# find element()
 lupa = browser.find_element(By.ID, "menuSearch")
 time.sleep(10)
 
@@ -18,10 +17,9 @@ lupa.click()
 time.sleep(10)
 assert lupa.is_displayed()
 
-# find elemente()
-browser.find_element(By.NAME, "mobile_search")
-self.mobile_search = input(f'Teste')
-time.sleep(10)
+# find element()
+browser.find_element(By.NAME, "mobile_search").send_keys("Teste")
+time.sleep(5)
 
 # click()
 lupa.click()

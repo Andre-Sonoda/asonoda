@@ -1,25 +1,21 @@
-import time
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+from selenium.webdriver.common.by import browser
 
-browser = webdriver.Chrome()
-browser.maximize_window()
-browser.get("https://advantageonlineshopping.com/")
-time.sleep(10)
+def test_Teste1():
+    browser: webdriver = webdriver.Chrome()
+    browser.implicitly_wait(20)
 
-# find element()
-lupa = browser.find_element(By.ID, "menuSearch")
-time.sleep(10)
-
-# click()
-lupa.click()
-time.sleep(5)
+    browser.maximize_window()
+    browser.get("https://advantageonlineshopping.com/")
 
 # find element()
-browser.find_element(By.XPATH, '//*[@id="mobileSearch"]/input').send_keys('Teste')
-time.sleep(5)
+def test_Teste2():
+    lupa = browser.find_element(By.ID, "menuSearch")
+    campo_busca = browser.find_element(By.NAME, "mobile_search")
 
-# click()
-lupa.click()
-time.sleep(10)
-assert lupa.is_displayed()
+#click()
+    lupa.click()
+
+#send_keys()
+    campo_busca.send_keys("Teste")

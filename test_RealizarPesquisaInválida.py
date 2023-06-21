@@ -8,11 +8,12 @@ browser.maximize_window()
 browser.get("https://advantageonlineshopping.com/")
 
 # find element()
-lupa = browser.find_element(By.ID, "menuSearch")
-campo_busca = browser.find_element(By.NAME, "mobile_search")
+def test_Teste1():
+    lupa = browser.find_element(By.ID, "menuSearch")
+# click()
+    lupa.click()
 
-#click()
-lupa.click()
-
-#send_keys()
-campo_busca.send_keys("Teste")
+def test_Teste2():
+    busca = browser.find_element(By.NAME, "mobile_search")
+# send_keys()
+    busca.send_keys("Teste")

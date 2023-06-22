@@ -1,22 +1,21 @@
-import time
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
-browser = webdriver.Chrome()
+browser: webdriver = webdriver.Chrome()
+browser.implicitly_wait(20)
+
 browser.maximize_window()
 browser.get("https://advantageonlineshopping.com/")
-time.sleep(10)
 
-#find elemente()
-lupa = browser.find_element(By.ID, "menuSearch")
-time.sleep(10)
 
-#click()
-lupa.click()
-time.sleep(10)
-assert lupa.is_displayed()
+# find element()
+def test_Teste1():
+    lupa = browser.find_element(By.ID, "menuSearch")
+    # click()
+    lupa.click()
 
-#find elemente()
-close = browser.find_element(By.XPATH, "(https://advantageonlineshopping.com/css/images/closeDark.png")
-close.click()
-time.sleep(5)
+#find element()
+def test_Teste2():
+    close = browser.find_element(By.CSS_SELECTOR, "#search > div > div > img")
+    close.click()
+    assert close.is_displayed()

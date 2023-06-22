@@ -15,7 +15,7 @@ def test_Teste1():
     lupa.click()
 
 
-def test_Teste2():
+def test_Teste2():1
     busca = browser.find_element(By.ID, "autoComplete")
     # send_keys()
     busca.send_keys("Teste")

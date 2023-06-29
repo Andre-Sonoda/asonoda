@@ -1,21 +1,24 @@
-from selenium import webdriver
+import time
+import pytest
 from selenium.webdriver.common.by import By
-
-browser: webdriver = webdriver.Chrome()
-browser.implicitly_wait(20)
-
-browser.maximize_window()
-browser.get("https://advantageonlineshopping.com/")
+import conftest
 
 
-# find element()
-def test_Teste1():
-    lupa = browser.find_element(By.ID, "menuSearch")
-    # click()
-    lupa.click()
+@pytest.mark.usefixtures("setup_teardown")
+class TestBusca:
+        def test_Teste1(self):
+            browser = conftest.browser
+            # find element()
+            lupa = browser.find_element(By.ID, "menuSearch")
+            # click()
+            lupa.click()
 
-#find element()
-def test_Teste2():
-    close = browser.find_element(By.CSS_SELECTOR, "#search > div > div > img")
-    close.click()
-    assert close.is_displayed()
+
+        def test_Teste2(self):
+            browser = conftest.browser
+            # find element()
+            close = browser.find_element(By.CSS_SELECTOR, "#search > div > div > img")
+            # click()
+            close.click()
+            assert close.is_displayed()
+            time.sleep(5)

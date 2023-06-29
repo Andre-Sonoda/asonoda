@@ -13,10 +13,9 @@ class TestBusca:
             # click()
             lupa.click()
             time.sleep(5)
-
-           # find element()
+            # find element()
             close = browser.find_element(By.CSS_SELECTOR, "#search > div > div > img")
             # click()
             close.click()
             assert close.is_displayed()
-
+            time.sleep(5)

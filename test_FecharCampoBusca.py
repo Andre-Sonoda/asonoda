@@ -12,13 +12,11 @@ class TestBusca:
             lupa = browser.find_element(By.ID, "menuSearch")
             # click()
             lupa.click()
+            time.sleep(5)
 
-
-        def test_Teste2(self):
-            browser = conftest.browser
-            # find element()
+           # find element()
             close = browser.find_element(By.CSS_SELECTOR, "#search > div > div > img")
             # click()
             close.click()
             assert close.is_displayed()
-            time.sleep(5)
+

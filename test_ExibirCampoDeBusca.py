@@ -9,7 +9,6 @@ class TestBusca:
         browser = conftest.browser
         #find elemente()
         lupa = browser.find_element(By.ID, "menuSearch")
-
         #clickc()
         lupa.click()
         assert lupa.is_displayed()

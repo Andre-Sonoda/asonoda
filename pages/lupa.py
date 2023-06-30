@@ -1,8 +1,11 @@
 import time
 
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 import conftest
-from selenium import webdriver
+
+
 
 class LupaPage:
 
@@ -10,6 +13,9 @@ class LupaPage:
         self.browser = conftest.browser
 
     def acessar_lupa(self):
-        lupa = conftest.browser.find_element(By.ID, "menuSearch")
+        wait = WebDriverWait(conftest.browser, 10)
+        lupa = wait.until(EC.element_to_be_clickable((By.ID, "menuSearch")))
+        #lupa = conftest.browser.find_element(By.ID, "menuSearch")
         lupa.click()
-        assert lupa.is_displayed()
+        close = conftest.browser.find_element(By.CSS_SELECTOR, "#search > div > div > img")
+        assert close.is_enabled()

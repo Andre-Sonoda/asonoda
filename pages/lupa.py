@@ -15,9 +15,6 @@ class LupaPage:
     def acessar_lupa(self):
         wait = WebDriverWait(conftest.browser, 10)
         lupa = wait.until(EC.element_to_be_clickable((By.ID, "menuSearch")))
-        #lupa = conftest.browser.find_element(By.ID, "menuSearch")
-        #teste
-        # teste2
         lupa.click()
         close = conftest.browser.find_element(By.CSS_SELECTOR, "#search > div > div > img")
         assert close.is_enabled()

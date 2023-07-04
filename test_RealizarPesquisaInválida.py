@@ -1,7 +1,7 @@
-import pytest
-import conftest
-from selenium.webdriver.common.by import By
 from threading import Event
+import pytest
+from selenium.webdriver.common.by import By
+import conftest
 from pages.lupa import LupaPage
 
 

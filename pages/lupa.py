@@ -4,11 +4,10 @@ from selenium.webdriver.support import expected_conditions as EC
 import conftest
 
 
-
 class LupaPage:
 
-    def __int__(self):
-        self.browser = conftest.browser
+    #def __int__(self):
+    #    self.browser = conftest.browser
 
     def acessar_lupa(self):
         wait = WebDriverWait(conftest.browser, 10)
